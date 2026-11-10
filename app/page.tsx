@@ -23,7 +23,7 @@ export default function Home() {
         <div className="wrap statement">
           <Reveal as="p" className="eyebrow">Our approach</Reveal>
           <Reveal as="p" className="statement__text">
-            <Link href="/project-marketing" className="inline-link">Project marketing</Link>
+            <Link href="/project-marketing" style={{ textDecoration: "none" }}>Project marketing</Link>
             {" "}is more than a sales campaign. We work alongside developers
             from feasibility through to settlement — providing the local market knowledge,
             buyer network and sales expertise that gets projects sold.
