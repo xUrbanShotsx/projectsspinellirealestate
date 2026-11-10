@@ -2,7 +2,7 @@ import Link from "next/link";
 import Reveal from "./components/Reveal";
 import ProjectIndex from "./components/ProjectIndex";
 import HeroVideo from "./components/HeroVideo";
-import HeroTagline from "./components/HeroTagline";
+import HeroChat from "./components/HeroChat";
 
 const marquee = ["Illawarra", "Project Marketing", "New Homes", "Local Experts"];
 
@@ -15,7 +15,7 @@ export default function Home() {
         {/* dark overlay so text stays legible over video */}
         <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.52)", zIndex: 1 }} />
         <div className="hero__grid" aria-hidden="true" style={{ position: "absolute", inset: 0, zIndex: 2 }} />
-        <HeroTagline />
+        <HeroChat />
       </section>
 
       {/* STATEMENT */}
