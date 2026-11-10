@@ -3,6 +3,7 @@ import Reveal from "./components/Reveal";
 import Counter from "./components/Counter";
 import ProjectIndex from "./components/ProjectIndex";
 import HeroVideo from "./components/HeroVideo";
+import HeroTagline from "./components/HeroTagline";
 
 const marquee = ["Illawarra", "Project Marketing", "New Homes", "Local Experts"];
 
@@ -15,11 +16,7 @@ export default function Home() {
         {/* dark overlay so text stays legible over video */}
         <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.52)", zIndex: 1 }} />
         <div className="hero__grid" aria-hidden="true" style={{ position: "absolute", inset: 0, zIndex: 2 }} />
-        <div style={{ position: "absolute", inset: 0, zIndex: 3, display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <p style={{ color: "#fff", fontFamily: "var(--font-sans), sans-serif", fontWeight: 700, fontSize: "clamp(28px, 4vw, 56px)", letterSpacing: "-0.02em", textAlign: "center", whiteSpace: "nowrap" }}>
-            Project Marketing Specialist
-          </p>
-        </div>
+        <HeroTagline />
       </section>
 
       {/* STATEMENT */}
