@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Reveal from "./components/Reveal";
-import Counter from "./components/Counter";
 import ProjectIndex from "./components/ProjectIndex";
 import HeroVideo from "./components/HeroVideo";
 import HeroTagline from "./components/HeroTagline";
@@ -32,24 +31,6 @@ export default function Home() {
       </section>
 
       {/* STATS */}
-      <section className="stats light">
-        <div className="wrap stats__grid">
-          {[
-            { n: 15, s: "+", l: "Years in the Illawarra" },
-            { n: 75, s: "+", l: "New homes sold" },
-            { n: 3, s: "", l: "Completed projects" },
-            { n: 1, s: "", l: "Active campaign" },
-          ].map((s, i) => (
-            <Reveal key={s.l} delay={i * 90} className="stat">
-              <span className="stat__n">
-                <Counter to={s.n} suffix={s.s} />
-              </span>
-              <span className="stat__l">{s.l}</span>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
       {/* PROJECTS */}
       <section className="section dark">
         <div className="wrap">
