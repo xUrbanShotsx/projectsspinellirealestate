@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Elevation from "./components/Elevation";
 import Reveal from "./components/Reveal";
 import Counter from "./components/Counter";
 import ProjectIndex from "./components/ProjectIndex";
+import HeroVideo from "./components/HeroVideo";
 
 const marquee = ["Illawarra", "Project Marketing", "New Homes", "Local Experts"];
 
@@ -10,10 +10,12 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="hero dark">
-        <div className="hero__grid" aria-hidden="true" />
-        <Elevation variant="tower" className="hero__art" />
-        <div className="wrap hero__inner">
+      <section className="hero dark" style={{ position: "relative", overflow: "hidden" }}>
+        <HeroVideo />
+        {/* dark overlay so text stays legible over video */}
+        <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.52)", zIndex: 1 }} />
+        <div className="hero__grid" aria-hidden="true" style={{ position: "absolute", inset: 0, zIndex: 2 }} />
+        <div className="wrap hero__inner" style={{ position: "relative", zIndex: 3 }}>
           <p className="eyebrow hero__eyebrow">Project Marketing · Illawarra &amp; South Coast</p>
           <h1 className="hero__title">
             New homes
