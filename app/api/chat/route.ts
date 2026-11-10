@@ -21,32 +21,39 @@ You specialise in project marketing: helping developers bring new residential pr
 
 If someone asks about a specific project, provide detail from what you know. If they ask about buying, explain the off-the-plan process clearly. If they're a developer, explain how Spinelli's project marketing service works.`;
 
-export async function POST(req: Request) {
-  const { messages } = await req.json();
-
-  const stream = client.messages.stream({
-    model: "claude-opus-4-5",
-    max_tokens: 1024,
-    system: SYSTEM,
-    messages,
-  });
-
+// TEST MODE — remove this block and uncomment the real handler below once ANTHROPIC_API_KEY is set in Vercel
+export async function POST() {
+  const TEST_RESPONSE = "This is a test";
+  const encoder = new TextEncoder();
   const readable = new ReadableStream({
-    async start(controller) {
-      const encoder = new TextEncoder();
-      stream.on("text", (text) => {
-        controller.enqueue(encoder.encode(text));
-      });
-      stream.on("error", (err) => {
-        controller.error(err);
-      });
-      stream.on("finalMessage", () => {
-        controller.close();
-      });
+    start(controller) {
+      controller.enqueue(encoder.encode(TEST_RESPONSE));
+      controller.close();
     },
   });
-
   return new Response(readable, {
     headers: { "Content-Type": "text/plain; charset=utf-8" },
   });
 }
+
+// REAL HANDLER — uncomment when ANTHROPIC_API_KEY is set:
+// export async function POST(req: Request) {
+//   const { messages } = await req.json();
+//   const stream = client.messages.stream({
+//     model: "claude-opus-4-5",
+//     max_tokens: 1024,
+//     system: SYSTEM,
+//     messages,
+//   });
+//   const readable = new ReadableStream({
+//     async start(controller) {
+//       const encoder = new TextEncoder();
+//       stream.on("text", (text) => { controller.enqueue(encoder.encode(text)); });
+//       stream.on("error", (err) => { controller.error(err); });
+//       stream.on("finalMessage", () => { controller.close(); });
+//     },
+//   });
+//   return new Response(readable, {
+//     headers: { "Content-Type": "text/plain; charset=utf-8" },
+//   });
+// }
