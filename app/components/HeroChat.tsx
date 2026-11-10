@@ -127,7 +127,7 @@ export default function HeroChat() {
         {/* ── CHAT HEADER (fades in after card expands) ── */}
         <div style={{
           display: "flex", alignItems: "center", justifyContent: "space-between",
-          padding: "14px 18px 0",
+          padding: isChat ? "14px 18px 0" : 0,
           height: isChat ? "auto" : 0,
           overflow: "hidden",
           opacity: innerVisible ? 1 : 0,
