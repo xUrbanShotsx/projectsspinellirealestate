@@ -158,7 +158,7 @@ export default function HeroChat() {
 
         {/* ── MESSAGES (fades in after card expands) ── */}
         <div ref={messagesRef} style={{
-          flex: 1,
+          flex: isChat ? 1 : "0 0 0px",
           overflowY: "scroll",
           padding: isChat ? "16px 18px" : 0,
           opacity: innerVisible ? 1 : 0,
@@ -234,8 +234,7 @@ export default function HeroChat() {
               fontSize: isChat ? 14 : 17,
               letterSpacing: "-0.01em",
               color: "#111",
-              textAlign: !isChat && !input ? "center" : "left",
-              transition: `font-size 0.4s ${EASE}, text-align 0s`,
+              transition: `font-size 0.4s ${EASE}`,
             }}
           />
           <button
