@@ -234,28 +234,29 @@ export default function HeroChat() {
               fontSize: isChat ? 14 : 17,
               letterSpacing: "-0.01em",
               color: "#111",
-              transition: `font-size 0.4s ${EASE}`,
+              textAlign: !isChat && !input ? "center" : "left",
+              transition: `font-size 0.4s ${EASE}, text-align 0s`,
             }}
           />
           <button
             onClick={send}
-            disabled={streaming || !input.trim()}
+            disabled={streaming}
             aria-label="Send"
             style={{
               width: isChat ? 36 : 44,
               height: isChat ? 36 : 44,
               borderRadius: "50%",
-              background: input.trim() && !streaming ? "#000" : "rgba(0,0,0,0.1)",
+              background: "#000",
               border: "none",
-              cursor: input.trim() && !streaming ? "pointer" : "default",
+              cursor: "pointer",
               display: "flex", alignItems: "center", justifyContent: "center",
               flexShrink: 0,
-              transition: `background 0.2s ${EASE}, width 0.4s ${EASE}, height 0.4s ${EASE}`,
+              transition: `width 0.4s ${EASE}, height 0.4s ${EASE}`,
             }}
           >
             <svg width="15" height="15" viewBox="0 0 18 18" fill="none">
               <path d="M9 15V3M9 3L4 8M9 3L14 8"
-                stroke={input.trim() && !streaming ? "#fff" : "rgba(0,0,0,0.3)"}
+                stroke="#fff"
                 strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </button>
