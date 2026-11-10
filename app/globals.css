@@ -795,6 +795,14 @@ textarea {
   transform: none;
 }
 
+/* Inline text link — matches statement weight */
+.inline-link {
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 1px;
+  transition: opacity 0.2s var(--ease);
+}
+.inline-link:hover { opacity: 0.55; }
+
 /* Responsive */
 @media (max-width: 960px) {
   .header {
@@ -934,6 +942,21 @@ textarea {
   .project-timeline-row {
     grid-template-columns: 100px 1fr;
     gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-row {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .services-num {
+    display: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .services-row {
+    grid-template-columns: 1fr !important;
   }
 }
 
