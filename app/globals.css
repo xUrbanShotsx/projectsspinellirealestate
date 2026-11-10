@@ -889,6 +889,40 @@ textarea {
   }
 }
 
+/* Project detail page */
+.project-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 96px);
+  align-items: start;
+}
+.project-facts-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+.project-timeline-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px;
+  padding: 24px 0;
+  border-top: 1px solid var(--line-light);
+}
+
+@media (max-width: 960px) {
+  .project-intro-grid {
+    grid-template-columns: 1fr;
+    gap: clamp(28px, 5vw, 48px);
+  }
+  .project-facts-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .project-timeline-row {
+    grid-template-columns: 100px 1fr;
+    gap: 12px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
