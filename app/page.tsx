@@ -15,22 +15,10 @@ export default function Home() {
         {/* dark overlay so text stays legible over video */}
         <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.52)", zIndex: 1 }} />
         <div className="hero__grid" aria-hidden="true" style={{ position: "absolute", inset: 0, zIndex: 2 }} />
-        <div className="wrap hero__inner" style={{ position: "relative", zIndex: 3 }}>
-          <p className="eyebrow hero__eyebrow">Project Marketing · Illawarra &amp; South Coast</p>
-          <h1 className="hero__title">
-            New homes
-            <br />
-            done right.
-          </h1>
-          <div className="hero__foot">
-            <p className="hero__lede">
-              Spinelli Projects is the dedicated project marketing arm of Spinelli Real Estate —
-              connecting buyers to the Illawarra&rsquo;s best new residential developments.
-            </p>
-            <Link href="/projects" className="btn btn--light">
-              View projects <span aria-hidden="true">→</span>
-            </Link>
-          </div>
+        <div style={{ position: "absolute", inset: 0, zIndex: 3, display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <p style={{ color: "#fff", fontFamily: "var(--font-sans), sans-serif", fontWeight: 700, fontSize: "clamp(28px, 4vw, 56px)", letterSpacing: "-0.02em", textAlign: "center", whiteSpace: "nowrap" }}>
+            Project Marketing Specialist
+          </p>
         </div>
       </section>
 
