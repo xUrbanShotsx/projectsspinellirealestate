@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "../components/Reveal";
+import ServiceRow from "../components/ServiceRow";
 
 export const metadata: Metadata = {
   title: "Project Marketing — Spinelli Projects",
@@ -96,33 +97,7 @@ export default function ProjectMarketingPage() {
           <div>
             {services.map((s, i) => (
               <Reveal key={s.num} delay={i * 40}>
-                <div className="services-row" style={{
-                  display: "grid",
-                  gridTemplateColumns: "80px 1fr 1fr",
-                  gap: "clamp(24px,4vw,64px)",
-                  padding: "clamp(32px,4vw,56px) 0",
-                  borderTop: "1px solid var(--line-light)",
-                  alignItems: "start",
-                }}>
-                  <span className="services-num" style={{
-                    fontFamily: "var(--font-mono), monospace",
-                    fontSize: 12,
-                    letterSpacing: "0.08em",
-                    color: "var(--grey)",
-                    paddingTop: 4,
-                  }}>{s.num}</span>
-                  <h2 style={{
-                    fontSize: "clamp(22px,2.4vw,36px)",
-                    fontWeight: 700,
-                    letterSpacing: "-0.03em",
-                    lineHeight: 1.1,
-                  }}>{s.title}</h2>
-                  <p style={{
-                    color: "var(--grey)",
-                    lineHeight: 1.75,
-                    fontSize: "clamp(15px,1.2vw,17px)",
-                  }}>{s.body}</p>
-                </div>
+                <ServiceRow num={s.num} title={s.title} body={s.body} delay={i * 40} />
               </Reveal>
             ))}
             {/* closing rule */}
