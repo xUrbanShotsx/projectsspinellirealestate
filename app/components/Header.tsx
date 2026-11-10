@@ -23,7 +23,7 @@ export default function Header() {
     <>
       <header className="header">
         <Link href="/" className="header__logo" aria-label="Spinelli Projects home">
-          <Image src="/logo.webp" alt="Spinelli Projects" width={240} height={60} priority style={{ height: "clamp(28px,3vw,42px)", width: "auto" }} />
+          <Image src="/logo.webp" alt="Spinelli Projects" width={360} height={90} priority style={{ height: "clamp(52px,5.5vw,80px)", width: "auto" }} />
         </Link>
         <nav className="header__nav" aria-label="Primary">
           {links.map((l) => (

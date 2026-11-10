@@ -4,7 +4,7 @@ import Reveal from "./components/Reveal";
 import Counter from "./components/Counter";
 import ProjectIndex from "./components/ProjectIndex";
 
-const marquee = ["Illawarra", "Design", "Delivery", "Community"];
+const marquee = ["Illawarra", "Project Marketing", "New Homes", "Local Experts"];
 
 export default function Home() {
   return (
@@ -14,16 +14,16 @@ export default function Home() {
         <div className="hero__grid" aria-hidden="true" />
         <Elevation variant="tower" className="hero__art" />
         <div className="wrap hero__inner">
-          <p className="eyebrow hero__eyebrow">Property development · Illawarra &amp; South Coast</p>
+          <p className="eyebrow hero__eyebrow">Project Marketing · Illawarra &amp; South Coast</p>
           <h1 className="hero__title">
-            Places built
+            New homes
             <br />
-            to endure.
+            done right.
           </h1>
           <div className="hero__foot">
             <p className="hero__lede">
-              Spinelli Projects creates considered residential and mixed-use buildings
-              across the Illawarra — from first site inspection to the day keys change hands.
+              Spinelli Projects is the dedicated project marketing arm of Spinelli Real Estate —
+              connecting buyers to the Illawarra&rsquo;s best new residential developments.
             </p>
             <Link href="/projects" className="btn btn--light">
               View projects <span aria-hidden="true">→</span>
@@ -37,9 +37,9 @@ export default function Home() {
         <div className="wrap statement">
           <Reveal as="p" className="eyebrow">Our approach</Reveal>
           <Reveal as="p" className="statement__text">
-            Good development is patient. We choose fewer sites, spend longer on the design and
-            build with materials that age well — so every Spinelli project looks better in
-            twenty years than it did on opening day.
+            Project marketing is more than a sales campaign. We work alongside developers
+            from feasibility through to settlement — providing the local market knowledge,
+            buyer network and sales expertise that gets projects sold.
           </Reveal>
         </div>
       </section>
@@ -49,9 +49,9 @@ export default function Home() {
         <div className="wrap stats__grid">
           {[
             { n: 15, s: "+", l: "Years in the Illawarra" },
-            { n: 196, s: "+", l: "Homes delivered" },
-            { n: 12, s: "", l: "Completed projects" },
-            { n: 4, s: "", l: "Active developments" },
+            { n: 75, s: "+", l: "New homes sold" },
+            { n: 3, s: "", l: "Completed projects" },
+            { n: 1, s: "", l: "Active campaign" },
           ].map((s, i) => (
             <Reveal key={s.l} delay={i * 90} className="stat">
               <span className="stat__n">
@@ -80,10 +80,10 @@ export default function Home() {
           <Reveal as="h2" className="h2 approach__title">How we work</Reveal>
           <div className="approach__list">
             {[
-              ["01", "Find", "We acquire sites in established Illawarra neighbourhoods where good architecture adds to the street and responds to the landscape."],
-              ["02", "Design", "Leading architects, a focused client brief and a thorough design phase. We resolve the details on paper so they are right on site."],
-              ["03", "Build", "Transparent programmes, fixed standards and a single point of accountability — from first excavation to final inspection."],
-              ["04", "Support", "We don't walk away at settlement. Spinelli stays involved with owners and buildings long after completion."],
+              ["01", "Advise", "We provide honest feasibility and pricing advice early — so developers go to market with confidence, not guesswork."],
+              ["02", "Position", "Naming, branding, floorplan strategy and collateral that speak to the right buyer in the right way."],
+              ["03", "Sell", "An active Illawarra buyer database, a dedicated project team, and a track record of selling off-the-plan."],
+              ["04", "Settle", "We stay engaged through the settlement phase — managing buyer relationships and minimising fall-through."],
             ].map(([n, t, d], i) => (
               <Reveal key={n} delay={i * 60} className="approach__item">
                 <span className="mono">{n}</span>
@@ -110,11 +110,11 @@ export default function Home() {
       {/* CTA */}
       <section className="section cta light">
         <div className="wrap">
-          <Reveal as="p" className="eyebrow">Register interest</Reveal>
+          <Reveal as="p" className="eyebrow">Work with us</Reveal>
           <Reveal as="h2" className="cta__title">
-            Ready to find
+            Launching a
             <br />
-            your home?
+            project?
           </Reveal>
           <Reveal>
             <Link href="/contact" className="btn btn--dark">

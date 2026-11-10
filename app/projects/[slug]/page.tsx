@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getProject, projects } from "../../data/projects";
-import Elevation from "../../components/Elevation";
 import Reveal from "../../components/Reveal";
 
 export function generateStaticParams() {
@@ -34,16 +34,24 @@ export default async function ProjectPage({
     ["Location", `${p.suburb}, ${p.city}`],
     ["Type", p.type],
     ["Homes", String(p.homes)],
-    ["Storeys", String(p.storeys)],
     ["Status", p.status],
     ["Completion", p.year],
   ];
 
   return (
     <>
-      <section className="project-hero dark">
-        <Elevation variant={p.variant} className="project-hero__art" />
-        <div className="wrap project-hero__inner">
+      <section className="project-hero dark" style={{ position: "relative" }}>
+        <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+          <Image
+            src={p.image}
+            alt={p.name}
+            fill
+            style={{ objectFit: "cover", opacity: 0.35 }}
+            priority
+            sizes="100vw"
+          />
+        </div>
+        <div className="wrap project-hero__inner" style={{ position: "relative", zIndex: 1 }}>
           <Link href="/projects" className="link">← All projects</Link>
           <h1 className="page-hero__title">{p.name}</h1>
           <p className="project-hero__sum">{p.summary}</p>

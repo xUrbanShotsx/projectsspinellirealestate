@@ -35,8 +35,9 @@ export default function ContactForm() {
         <select name="role" defaultValue="Buyer">
           <option>Buyer</option>
           <option>Investor</option>
-          <option>Agent</option>
+          <option>Developer</option>
           <option>Landowner</option>
+          <option>Agent</option>
           <option>Other</option>
         </select>
       </label>

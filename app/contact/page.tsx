@@ -17,8 +17,8 @@ export default function Contact() {
           <div className="contact__info">
             <p className="eyebrow">Buyers &amp; investors</p>
             <p>Register your interest to receive pricing and floorplans before public release.</p>
-            <p className="eyebrow">Agents &amp; landowners</p>
-            <p>Interested in an off-market conversation? We respond to every enquiry, in confidence.</p>
+            <p className="eyebrow">Developers &amp; landowners</p>
+            <p>Looking for a project marketing partner? We respond to every enquiry, in confidence.</p>
             <p className="eyebrow">Studio</p>
             <p>
               Shellharbour City Centre

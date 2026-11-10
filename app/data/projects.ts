@@ -6,79 +6,67 @@ export type Project = {
   suburb: string;
   city: string;
   type: string;
-  status: "Selling" | "Under construction" | "Completed" | "Coming soon";
+  status: "Now Selling" | "Sold Out" | "Under Management" | "Coming Soon";
   year: string;
   variant: Variant;
   homes: number;
   storeys: number;
+  image: string;
   summary: string;
   details: string;
 };
 
 export const projects: Project[] = [
   {
-    slug: "the-meridian",
-    name: "The Meridian",
-    suburb: "Shellharbour City",
+    slug: "elevation-77",
+    name: "Elevation 77",
+    suburb: "Shellharbour City Centre",
     city: "Illawarra",
-    type: "Mixed-use residential",
-    status: "Selling",
-    year: "2027",
+    type: "Multi-Level Residential",
+    status: "Sold Out",
+    year: "2022",
     variant: "tower",
-    homes: 86,
-    storeys: 12,
+    homes: 50,
+    storeys: 8,
+    image: "/Elevation.jpg",
     summary:
-      "Eighty-six residences above a ground-floor activated retail precinct in the heart of Shellharbour City Centre.",
+      "A landmark mixed-use tower in the heart of Shellharbour City Centre. Over 50 apartments sold off the plan — premium residences above an activated ground-floor retail precinct.",
     details:
-      "The Meridian anchors the northern edge of Shellharbour City Centre with a confident twelve-storey form. Ground-floor tenancies open directly onto the City Centre boulevard. Each residence is dual-aspect with recessed balconies, natural stone finishes and views across the lake to the escarpment beyond. Construction begins Q1 2026.",
+      "Life at Elevation 77 is defined by the moments between. Morning coffee from the café below, evenings on your balcony as the sun drops behind the escarpment, weekends spent walking to the lake or the village without once touching your car. Each residence was designed to bring the outside in, with generous glazing, north-facing aspects and premium finishes. Practical completion was achieved in December 2022, with secure basement parking, lift access, and ground-floor retail tenancies completing the offering.",
   },
   {
-    slug: "heron-park",
-    name: "Heron Park",
-    suburb: "Blackbutt",
+    slug: "bluewater",
+    name: "Bluewater",
+    suburb: "Kiama",
     city: "Illawarra",
-    type: "Terraced townhomes",
-    status: "Under construction",
-    year: "2026",
-    variant: "terrace",
-    homes: 34,
-    storeys: 3,
-    summary:
-      "Thirty-four terraced townhomes set within a retained canopy of mature blackbutt trees.",
-    details:
-      "Heron Park responds to the topography of its bushland site rather than flattening it. Each townhome is set a half-storey into the slope, with a private rear garden and a first-floor study opening onto a treetop deck. Shared paths thread between homes and connect to the Blackbutt Reserve trail network. Completion expected late 2026.",
-  },
-  {
-    slug: "corrimal-gardens",
-    name: "Corrimal Gardens",
-    suburb: "Corrimal",
-    city: "Illawarra",
-    type: "Boutique apartments",
-    status: "Completed",
-    year: "2024",
+    type: "Boutique Apartments",
+    status: "Sold Out",
+    year: "2022",
     variant: "pavilion",
-    homes: 22,
+    homes: 23,
     storeys: 4,
+    image: "/bluewater.jpg",
     summary:
-      "Twenty-two low-rise apartments arranged around a lush central courtyard, two minutes from Corrimal Beach.",
+      "A boutique coastal apartment building capturing panoramic ocean and harbour views across Kiama's iconic blowhole headland. 23 residences designed for the discerning coastal buyer.",
     details:
-      "A quiet building that earns its place on a residential street. Corrimal Gardens is four storeys of board-formed concrete and western red cedar, with deep overhanging eaves and a central garden courtyard planted with native coastal species. All twenty-two homes sold prior to completion. Completed and occupied in 2024.",
+      "Kiama is a town that gets under your skin. The sound of the blowhole on a still morning. The smell of salt in the air as you walk to the farmers market. The way the light sits on the harbour at dusk — golden, unhurried, entirely its own. Bluewater was designed for those who have found this place and decided they never want to leave. Each residence opens to the ocean through full-width glazing and north-facing terraces, so that the sea is never a backdrop — it is the view you wake up to, the one you come home to.",
   },
   {
-    slug: "south-point",
-    name: "South Point",
-    suburb: "Shellharbour Village",
+    slug: "greenacre",
+    name: "Greenacre",
+    suburb: "Wollongong",
     city: "Illawarra",
-    type: "Coastal residences",
-    status: "Coming soon",
-    year: "2028",
+    type: "Duplex",
+    status: "Under Management",
+    year: "2023",
     variant: "court",
-    homes: 54,
-    storeys: 6,
+    homes: 2,
+    storeys: 2,
+    image: "/12.jpg",
     summary:
-      "A six-storey cliff-edge building of fifty-four residences, every one facing the Pacific.",
+      "A considered duplex residence on a tree-lined street in Wollongong — space, light, and a neighbourhood that actually feels like one.",
     details:
-      "South Point occupies a rare site on the headland above Shellharbour Village. The building steps back in section so that all fifty-four residences face north-east across Bass Point to the ocean. Deep pre-cast concrete balconies provide shade and weather protection. Ground level is entirely public: a coastal path, a café and a viewing deck accessible to the village. DA lodgement planned for Q3 2026.",
+      "Wollongong is a city that has quietly become one of the most compelling places to live on the east coast. The ocean is minutes away. The escarpment rises behind you. The food scene has arrived, the arts precinct is alive, and the train to Sydney means you can have it all without sacrificing any of it. Greenacre places you at the heart of this — on a tree-lined street where the pace slows and the city noise fades, but everything you need is still within reach.",
   },
 ];
 
