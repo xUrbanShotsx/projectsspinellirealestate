@@ -137,7 +137,7 @@ export default function ProjectMarketingPage() {
           <div>
             {services.map((s, i) => (
               <Reveal key={s.num} delay={i * 40}>
-                <ServiceRow num={s.num} title={s.title} body={s.body} detail={s.detail} delay={i * 40} />
+                <ServiceRow num={s.num} title={s.title} body={s.body} delay={i * 40} />
               </Reveal>
             ))}
             {/* closing rule */}
